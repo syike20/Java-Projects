@@ -3,7 +3,8 @@
 
 /*A simple Java console-based calculator designed to practice 
 and demonstrate fundamental programming concepts, including variables and data types, 
-operators, conditional statements, switch-case, loops, methods, and user input handling.*/
+operators, conditional statements, switch-case, loops, methods, and user input handling.
+*/
 
 import java.util.Scanner;
 class ConsoleCalculator{
