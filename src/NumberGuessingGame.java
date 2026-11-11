@@ -1,30 +1,29 @@
 import java.util.Scanner;
 import java.util.Random;
 class NumberGuessingGame{
-    public static void main(String[] args){
-        System.out.println("------------------------");
-        System.out.println("GUESS THE NUMBER BUDDY !");
-        System.out.println("------------------------");
-
+    static void main() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-
-        int chance = 1 ;
-        while(chance<=3){
-            System.out.println("Guess the Number(1-10):");   
-            int number = random.nextInt(1,11);
-                 
-            int userChoice = scanner.nextInt();
-            
-            if(userChoice==number){
-                System.out.println("YOU WON !!!!");
+        System.out.println("NUMBER GUESSING GAME");
+        int numberToGuess = random.nextInt(10) + 1;
+        int chance = 0;
+        boolean guess = false;
+        while (chance < 3) {
+            System.out.print("ENTER ANY NUMBER FROM 1 - 10 : ");
+            int userGuess = scanner.nextInt();
+            if (numberToGuess == userGuess) {
+                guess = true;
                 break;
-            }
-            else{
-                System.out.println("TRY AGAIN!");
+            } else {
+                System.out.println("OOPS!! WRONG  ");
             }
             chance++;
         }
+        if(!guess && chance == 3) {
+            System.out.println("THE NUMBER WAS " +  numberToGuess);
+            System.out.println("THANK FOR PLAYING ;)");
+        }
+
         scanner.close();
     }
 }
